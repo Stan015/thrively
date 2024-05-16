@@ -1,0 +1,59 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-yellow: #fdda79;
+  --vt-c-faded-yellow: #f7f6f1;
+  --vt-c-redish: #ed4a60;
+  --vt-c-black: #000000;
+  --vt-c-grey-light: #e6e6e6;
+  --vt-c-grey-dark: #6a6a6a;
+  --vt-c-black-mute: #282828;
+  --vt-c-dark-purple: #45193b;
+}
+
+/* semantic color variables for this project */
+:root {
+  --clr-background-primary: var(--vt-c-white);
+  --clr-background-secondary: var(--vt-c-faded-yellow);
+  --clr-background-third: var(--vt-c-redish);
+
+  --clr-border-primary: var(--vt-c-black);
+  --clr-border-secondary: var(--vt-c-grey-light);
+  --clr-border-action: var(--vt-c-redish)
+
+  --clr-heading-primary: var(--vt-c-dark-purple);
+  --clr-heading-seondary: var(--vt-c-dark-purple);
+  --clr-text-primary: var(--vt-c-grey-dark);
+  --clr-text-secondary: var(--vt-c-white);
+
+  --clr-action-primary: var(--vt-c-redish);
+  --clr-action-secondary: var(--vt-c-yellow);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: GT-America-Standard-Regular-Trial;
+  src: url(./gt-america-trial-cdnfonts/GT-America-Standard-Regular-Trial.otf);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--clr-text-primary);
+  background: var(--clr-background-primary);
+  /* transition:
+    color 0.5s,
+    background-color 0.5s; */
+  line-height: 1.6;
+  font-family: GT-America-Standard-Regular-Trial, sans-serif;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
