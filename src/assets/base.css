@@ -4,6 +4,7 @@
   --vt-c-yellow: #fdda79;
   --vt-c-faded-yellow: #f7f6f1;
   --vt-c-redish: #ed4a60;
+  --vt-c-redish-transperent: rgb(237, 74, 96, 76%);
   --vt-c-black: #000000;
   --vt-c-grey-light: #e6e6e6;
   --vt-c-grey-dark: #6a6a6a;
@@ -22,12 +23,18 @@
   --clr-border-action: var(--vt-c-redish)
 
   --clr-heading-primary: var(--vt-c-dark-purple);
-  --clr-heading-seondary: var(--vt-c-dark-purple);
+  --clr-heading-seondary: var(--vt-c-white);
   --clr-text-primary: var(--vt-c-grey-dark);
   --clr-text-secondary: var(--vt-c-white);
 
+  --clr-header-navs: var(--vt-c-dark-purple);
+  --clr-header-navs-hover: var(--vt-c-black);
+  --clr-header-navs-hover: var(--vt-c-black);
+  --clr-header-navs-bg-hover: var(--vt-c-redish-transperent);
+
   --clr-action-primary: var(--vt-c-redish);
   --clr-action-secondary: var(--vt-c-yellow);
+  --clr-action-third: var(--vt-c-dark-purple);
 }
 
 *,
@@ -40,7 +47,16 @@
 
 @font-face {
   font-family: GT-America-Standard-Regular-Trial;
-  src: url(./gt-america-trial-cdnfonts/GT-America-Standard-Regular-Trial.otf);
+  src: url(./gt-america-trial-cdnfonts/GT-America-Standard-Regular-Trial.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Garnett;
+  src: 
+    /* url(./garnett-font-family/Garnett-Bold.woff) format("woff"), */
+    /* url(./garnett-font-family/Garnett-Bold.ttf) format("TrueType"), */
+    url(./garnett-font-family/Garnett-Medium.ttf) format("TrueType"),
+    url(./garnett-font-family/Garnett-Medium.woff) format("woff");
 }
 
 body {
@@ -50,7 +66,7 @@ body {
   /* transition:
     color 0.5s,
     background-color 0.5s; */
-  line-height: 1.6;
+  /* line-height: 1.6; */
   font-family: GT-America-Standard-Regular-Trial, sans-serif;
   font-size: 1rem;
   text-rendering: optimizeLegibility;

@@ -1,4 +1,5 @@
 <script setup>
+import '../assets/main.css'
 import HeroSection from "../components/HeroSection.vue";
 import OurOffers from "../components/OurOffers.vue";
 import OurArticles from "../components/OurArticles.vue";

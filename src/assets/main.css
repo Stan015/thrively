@@ -4,6 +4,9 @@
   width: 100%;
   margin: 0 auto;
   font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a,

@@ -1,87 +1,91 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import StarIcon from "./components/icons/IconStar.vue"
-import DiscordIcon from "./components/icons/IconDiscord.vue"
+import "./assets/main.css";
+import { RouterLink, RouterView } from "vue-router";
+import StarIcon from "./components/icons/IconStar.vue";
+import DiscordIcon from "./components/icons/IconDiscord.vue";
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="/logo.svg" width="125" height="125" />
+    <a href="/"
+      ><img
+        alt="Vue logo"
+        class="logo"
+        src="/logo.svg"
+        width="125"
+        height="125"
+    /></a>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/">Books</RouterLink>
-        <RouterLink to="/">Documentary</RouterLink>
-        <RouterLink to="/">Careers</RouterLink>
-        <RouterLink to="/"><StarIcon /> Articles</RouterLink>
-      </nav>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/">Books</RouterLink>
+      <RouterLink to="/">Documentary</RouterLink>
+      <RouterLink to="/">Careers</RouterLink>
+      <RouterLink to="/"><StarIcon /> Articles</RouterLink>
+    </nav>
 
-      <a href="/"><DiscordIcon /> Discord</a>
+    <a href="/" class="socials"><DiscordIcon /> Discord</a>
   </header>
 
   <RouterView />
 </template>
 
 <style scoped>
-/* header {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   line-height: 1.5;
-  max-height: 100vh;
+  height: 4rem;
+  width: 90%;
+  position: absolute;
+  border-radius: 5rem;
+  background-color: var(--clr-background-primary);
+  top: 2rem;
+  margin: 0 10%;
+  padding-inline: 2rem;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  width: 5rem;
+  height: max-content;
 }
 
 nav {
-  width: 100%;
-  font-size: 12px;
+  font-size: 1rem;
   text-align: center;
-  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: var(--clr-header-navs-hover);
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+nav a.router-link-exact-active:hover,
+.socials:hover {
+  color: var(--clr-header-navs-hover);
+  background-color: var(--clr-header-navs-bg-hover);
 }
 
-nav a {
+nav a,
+.socials {
   display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  padding-inline: 0.8rem;
+  border-radius: 2rem;
+  color: var(--clr-header-navs);
 }
 
 nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-} */
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
 </style>
