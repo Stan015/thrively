@@ -7,9 +7,9 @@
   --vt-c-redish-transperent: rgb(237, 74, 96, 76%);
   --vt-c-black: #000000;
   --vt-c-grey-light: #e6e6e6;
-  --vt-c-grey-dark: #6a6a6a;
+  --vt-c-grey-dark: rgba(106, 106, 106, 1);
+  --vt-c-dark-purple: rgba(69, 25, 59, 1);
   --vt-c-black-mute: #282828;
-  --vt-c-dark-purple: #45193b;
 }
 
 /* semantic color variables for this project */
@@ -20,12 +20,14 @@
 
   --clr-border-primary: var(--vt-c-black);
   --clr-border-secondary: var(--vt-c-grey-light);
-  --clr-border-action: var(--vt-c-redish)
+  --clr-border-action: var(--vt-c-redish);
 
   --clr-heading-primary: var(--vt-c-dark-purple);
   --clr-heading-seondary: var(--vt-c-white);
+  --clr-heading-third: var(--vt-c-redish);
   --clr-text-primary: var(--vt-c-grey-dark);
   --clr-text-secondary: var(--vt-c-white);
+  --clr-text-third: var(--vt-c-dark-purple);
 
   --clr-header-navs: var(--vt-c-dark-purple);
   --clr-header-navs-hover: var(--vt-c-black);
@@ -43,6 +45,22 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
@@ -73,3 +91,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  color: var(--clr-heading-primary);
+} */

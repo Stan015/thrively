@@ -37,13 +37,14 @@ header {
   align-items: center;
   line-height: 1.5;
   height: 4rem;
-  width: 90%;
+  width: 80%;
   position: absolute;
   border-radius: 5rem;
   background-color: var(--clr-background-primary);
   top: 2rem;
   margin: 0 10%;
   padding-inline: 2rem;
+  z-index: 2;
 }
 
 .logo {
@@ -87,5 +88,21 @@ nav a:first-of-type {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+@media screen and (max-width: 1045px) {
+  header {
+    width: 90%;
+  }
+
+  nav {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
 }
 </style>
