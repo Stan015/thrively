@@ -162,6 +162,8 @@ nav a:first-of-type {
     height: 2.5rem;
     width: 4rem;
     color: var(--clr-header-navs);
+    outline: none;
+    border: none;
   }
 }
 </style>
