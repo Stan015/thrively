@@ -120,6 +120,7 @@ h3 {
   font-size: 2rem;
   font-weight: 500;
   color: var(--clr-heading-primary);
+  text-align: center;
 }
 
 .first-div,
@@ -233,6 +234,16 @@ h3 {
     .item2::before {
       left: 30%;
       bottom: -4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container-div {
+    padding: 2rem;
+
+    & .second-div {
+      padding-block: 3rem;
     }
   }
 }

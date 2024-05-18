@@ -55,7 +55,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-inline: 10%;
+  margin-inline: 5%;
   padding-top: 4rem;
 }
 
@@ -164,9 +164,66 @@ main {
       font-size: 1.2rem;
     }
   }
+
+  main .get-started-sect {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & .container {
+      justify-content: center;
+      width: 70%;
+      align-items: center;
+
+      & h3,
+      & p {
+        text-align: center;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .get-started-sect {
+    & .container-2 {
+      width: 70%;
+    }
+  }
+}
 
+@media screen and (max-width: 420px) {
+  main .who-we-are-sect {
+  height: auto;
+  margin-bottom: 2rem;
+  }
+
+  main .get-started-sect {
+    & .container-2 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+      gap: 2rem;
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: unset;
+        gap: 2rem;
+        align-items: center;
+        padding-block: 1rem;
+
+        & h4 {
+          text-align: center;
+        }
+
+        & p {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 </style>

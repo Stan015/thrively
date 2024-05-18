@@ -92,21 +92,22 @@ section {
     font-weight: 500;
     color: var(--clr-heading-primary);
     margin-bottom: 3rem;
+    text-align: center;
   }
 }
 
 .cards-container {
-    display: flex;
-    gap: 3rem;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 
-    @media screen and (min-width: 1200px) {
-      justify-content: space-between;
-    }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 h4 {
@@ -116,25 +117,40 @@ h4 {
 }
 
 & .btns {
-    display: flex;
-    gap: 2rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 1rem;
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1rem;
 
-    & button {
-        background-color: unset;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        border: 1px solid var(--clr-border-primary);
+  & button {
+    background-color: unset;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--clr-border-primary);
 
-        &:hover {
-            border: 1px solid var(--clr-border-action);
-            background-color: var(--clr-background-third);
-            color: var(--clr-text-secondary);
-        }
+    &:hover {
+      border: 1px solid var(--clr-border-action);
+      background-color: var(--clr-background-third);
+      color: var(--clr-text-secondary);
     }
   }
+}
+
+@media screen and (max-width: 1045px) {
+  section {
+    width: 90%;
+  }
+
+  & .btns {
+    right: unset;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
 </style>

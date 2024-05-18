@@ -70,7 +70,7 @@ const handleFormSubmit = () => {
 }
 
 .hero-section div::before {
-  content: '';
+  content: "";
   width: 3rem;
   height: 3rem;
   background-image: url(/shapes/flower.svg);
@@ -79,7 +79,7 @@ const handleFormSubmit = () => {
   left: -2rem;
 }
 .hero-section div::after {
-  content: '';
+  content: "";
   width: 3rem;
   height: 3rem;
   background-image: url(/shapes/flower.svg);
@@ -152,15 +152,15 @@ button {
 
 @media screen and (max-width: 1045px) {
   h1 {
-  font-size: 3rem;
-}
+    font-size: 3rem;
+  }
 
-.img-1,
-.img-2 {
-  bottom: 0rem;
-  width: 15rem;
-  height: 15rem;
-}
+  .img-1,
+  .img-2 {
+    bottom: 0rem;
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -169,10 +169,42 @@ button {
   }
 
   .img-1,
-.img-2 {
-  bottom: 0rem;
-  width: 7rem;
-  height: 7rem;
+  .img-2 {
+    bottom: 0rem;
+    width: 7rem;
+    height: 7rem;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .hero-section div {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  input {
+    width: 20rem;
+    padding-inline: 1rem;
+  }
+
+  button {
+    width: 7rem;
+    font-size: 0.8rem;
+  }
+}
+
+.hero-section div::before {
+  left: 3rem;
+}
+.hero-section div::after {
+  right: 3rem;
 }
 </style>

@@ -42,7 +42,7 @@ header {
   border-radius: 5rem;
   background-color: var(--clr-background-primary);
   top: 2rem;
-  margin: 0 10%;
+  margin: 0 5%;
   padding-inline: 2rem;
   z-index: 2;
 }

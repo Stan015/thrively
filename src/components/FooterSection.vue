@@ -102,6 +102,7 @@ section {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  gap: 3rem;
 
   & .subscription-div {
     display: flex;
@@ -148,16 +149,16 @@ section {
     }
   }
   .subscription-div::after {
-  content: '';
-  width: 3rem;
-  height: 3rem;
-  background-image: url(/shapes/flower.svg);
-  background-repeat: no-repeat;
-  position: absolute;
-  right: -4rem;
-  bottom: 3rem;
-  transform: scale(-1, 1)
-}
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/shapes/flower.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -4rem;
+    bottom: 3rem;
+    transform: scale(-1, 1);
+  }
 
   & .quick-links {
     display: flex;
@@ -214,6 +215,64 @@ section {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  section {
+    padding: 1.5rem;
+  }
+  .ftr-container .first-child-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    & .subscription-div {
+      & h2 {
+        width: 100%;
+        text-align: center;
+      }
+      input {
+        padding-inline: 1rem;
+      }
+
+      button {
+        width: 6rem;
+      }
+    }
+
+    & .quick-links {
+      gap: 1.5rem;
+      margin-right: unset;
+    }
+  }
+
+  .ftr-container .second-child-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+    height: unset;
+    padding-block: 2rem;
+
+    & p {
+      text-align: center;
+    }
+
+    & a {
+      color: var(--clr-text-secondary);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .subscription-div::after {
+    right: 1rem !important;
   }
 }
 </style>
