@@ -107,6 +107,11 @@ nav a:first-of-type {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  border: 1px solid var(--clr-header-navs);
+
+  &:hover {
+    border: 1px solid var(--clr-header-navs-bg-hover);
+  }
 }
 
 .socials-mobile-v {
