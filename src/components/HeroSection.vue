@@ -144,6 +144,7 @@ button {
 
 .img-1 {
   left: -1rem;
+  bottom: -1rem;
 }
 
 .img-2 {
@@ -201,6 +202,11 @@ button {
   }
 }
 
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
 .hero-section div::before {
   left: 3rem;
 }

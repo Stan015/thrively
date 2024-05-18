@@ -28,6 +28,7 @@
   --clr-text-primary: var(--vt-c-grey-dark);
   --clr-text-secondary: var(--vt-c-white);
   --clr-text-third: var(--vt-c-dark-purple);
+  --clr-text-black: var(--vt-c-black);
 
   --clr-header-navs: var(--vt-c-dark-purple);
   --clr-header-navs-hover: var(--vt-c-black);

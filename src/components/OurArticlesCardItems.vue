@@ -44,6 +44,8 @@ defineProps({
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--clr-background-primary);
+  position: relative;
 
   & .img-container {
     width: 100%;
@@ -96,5 +98,17 @@ defineProps({
       color: var(--clr-text-secondary);
     }
   }
+}
+.card-container::before {
+  content: "";
+  width: 20rem;
+  height: 28rem;
+  border-radius: 1rem;
+  border: 1px solid var(--clr-border-primary);
+  position: absolute;
+  left: -0.3rem;
+  bottom: -0.3rem;
+  z-index: 0;
+  background-color: var(--clr-background-secondary);
 }
 </style>

@@ -3,6 +3,11 @@ import "./assets/main.css";
 import { RouterLink, RouterView } from "vue-router";
 import StarIcon from "./components/icons/IconStar.vue";
 import DiscordIcon from "./components/icons/IconDiscord.vue";
+import { Icon } from "@iconify/vue";
+
+import { ref } from "vue";
+
+const show = ref(false);
 </script>
 
 <template>
@@ -16,15 +21,27 @@ import DiscordIcon from "./components/icons/IconDiscord.vue";
         height="125"
     /></a>
 
-    <nav>
+    <nav :class="{'show-nav':show, 'hide-nav': !show}">
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/">Books</RouterLink>
       <RouterLink to="/">Documentary</RouterLink>
       <RouterLink to="/">Careers</RouterLink>
       <RouterLink to="/"><StarIcon /> Articles</RouterLink>
+      <a href="/" class="socials-mobile-v"><DiscordIcon /> Discord</a>
     </nav>
 
     <a href="/" class="socials"><DiscordIcon /> Discord</a>
+    <Icon
+      tabindex="1"
+      aria-labelledby="toggle menu"
+      @click="show = !show"
+      class="burger-menu"
+      :icon="
+        show
+          ? 'line-md:menu-to-close-alt-transition'
+          : 'iconamoon:menu-burger-horizontal-bold'
+      "
+    />
   </header>
 
   <RouterView />
@@ -72,7 +89,8 @@ nav a.router-link-exact-active:hover,
 }
 
 nav a,
-.socials {
+.socials,
+.socials-mobile-v {
   display: inline-block;
   padding-inline: 0.8rem;
   border-radius: 2rem;
@@ -83,11 +101,20 @@ nav a:first-of-type {
   border: 0;
 }
 
-.socials {
+.socials,
+.socials-mobile-v {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.socials-mobile-v {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
 }
 
 @media screen and (max-width: 1045px) {
@@ -100,9 +127,41 @@ nav a:first-of-type {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 876px) {
   nav {
     display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 100%;
+    width: 50%;
+    padding-block: 4rem;
+    background-color: var(--clr-background-primary);
+    border-radius: 2rem;
+  }
+
+  .show-nav {
+    display: flex;
+  }
+
+  .hide-nav {
+    display: none;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .socials-mobile-v {
+    display: flex;
+    margin-top: 1.5rem;
+  }
+
+  .burger-menu {
+    display: block;
+    height: 2.5rem;
+    width: 4rem;
+    color: var(--clr-header-navs);
   }
 }
 </style>

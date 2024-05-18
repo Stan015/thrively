@@ -130,6 +130,7 @@ h4 {
     height: 2.5rem;
     border-radius: 50%;
     border: 1px solid var(--clr-border-primary);
+    color: var(--clr-text-black);
 
     &:hover {
       border: 1px solid var(--clr-border-action);

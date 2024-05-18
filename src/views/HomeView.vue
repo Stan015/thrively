@@ -9,54 +9,74 @@ import FooterSection from "../components/FooterSection.vue";
 <template>
   <HeroSection />
   <main>
-    <section class="who-we-are-sect">
-      <h2>Who we are?</h2>
-      <p>
-        We believe in the power of personal development to transform lives. Our
-        mission is to provide you with the tools, resources, and support you
-        need to unlock your full potential and lead a more fulfilling life.
-      </p>
-    </section>
-    <OurOffers />
-    <section class="get-started-sect">
-      <div class="container">
-        <h3>Get started in just three simple steps</h3>
+    <div class="parent-container">
+      <section class="who-we-are-sect">
+        <h2>Who we are?</h2>
         <p>
-          Subscribe to our newsletter, confirm your subscription, and enjoy
-          weekly doses of inspiration, insights, and growth strategies delivered
-          straight to your inbox.
+          We believe in the power of personal development to transform lives.
+          Our mission is to provide you with the tools, resources, and support
+          you need to unlock your full potential and lead a more fulfilling
+          life.
         </p>
-        <a href="/">Get Started now &gt;</a>
-      </div>
-      <div class="container-2">
-        <div>
-          <h4>1</h4>
-          <p>Enter your email address and click subscribe on the form</p>
+      </section>
+      <OurOffers />
+      <section class="get-started-sect">
+        <div class="container">
+          <h3>Get started in just three simple steps</h3>
+          <p>
+            Subscribe to our newsletter, confirm your subscription, and enjoy
+            weekly doses of inspiration, insights, and growth strategies
+            delivered straight to your inbox.
+          </p>
+          <a href="/">Get Started now &gt;</a>
         </div>
-        <div>
-          <h4>2</h4>
-          <p>Check your inbox for a confirmation email</p>
+        <div class="container-2">
+          <div>
+            <h4>1</h4>
+            <p>Enter your email address and click subscribe on the form</p>
+          </div>
+          <div>
+            <h4>2</h4>
+            <p>Check your inbox for a confirmation email</p>
+          </div>
+          <div>
+            <h4>3</h4>
+            <p>Once confirmed, you're all set!</p>
+          </div>
         </div>
-        <div>
-          <h4>3</h4>
-          <p>Once confirmed, you're all set!</p>
-        </div>
-      </div>
-    </section>
-    <OurArticles />
+      </section>
+      <OurArticles />
+    </div>
   </main>
   <FooterSection />
 </template>
 
 <style>
 main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+main::before {
+  content: "";
+  width: 100%;
+  height: 1.4rem;
+  position: absolute;
+  background-color: var(--clr-background-primary);
+  border-radius: 10rem 10rem 0 0;
+  top: -1.3rem;
+}
+
+.parent-container {
   width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-inline: 5%;
-  padding-top: 4rem;
+  padding-top: 2.5rem;
 }
 
 .who-we-are-sect {
@@ -121,7 +141,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 100%;
+    height: max-content;
     justify-content: space-between;
 
     & div {
@@ -154,7 +174,7 @@ main {
 }
 
 @media screen and (max-width: 1045px) {
-  main {
+  .parent-container {
     width: 90%;
   }
   .who-we-are-sect {
@@ -165,7 +185,7 @@ main {
     }
   }
 
-  main .get-started-sect {
+  .parent-container .get-started-sect {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -192,17 +212,22 @@ main {
 }
 
 @media screen and (max-width: 420px) {
-  main .who-we-are-sect {
-  height: auto;
-  margin-bottom: 2rem;
+  .parent-container .who-we-are-sect {
+    height: auto;
+    margin-bottom: 3rem;
+    align-items: center;
+
+    & p {
+      text-align: center;
+    }
   }
 
-  main .get-started-sect {
+  .parent-container .get-started-sect {
     & .container-2 {
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 100%;
+      height: max-content;
       justify-content: space-between;
       gap: 2rem;
 

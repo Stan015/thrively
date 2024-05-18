@@ -204,7 +204,7 @@ h3 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 876px) {
   .second-div {
     h3 {
       text-align: center;
